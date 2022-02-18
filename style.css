@@ -1,0 +1,6 @@
+ #remaining-balance-error, #balance-error{
+     background-color: brown;
+     color: white;
+     padding-left: 10px;
+      display:none;  
+ }  

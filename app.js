@@ -28,10 +28,15 @@ document.getElementById('calc-btn').addEventListener('click', function () {
 
     // total balance calculation 
     const incomeInput = parseFloat(document.getElementById('income-input').value);
-    let prevbalance = document.getElementById('balance').innerText;
-    const balance = incomeInput - newTotalExpenses;
-    document.getElementById('balance').innerText = balance;
-
+    let prevbalance = document.getElementById('balance');
+    const BalanceError = document.getElementById('balance-error');
+    if (incomeInput > newTotalExpenses) {
+        const balance = incomeInput - newTotalExpenses;
+        document.getElementById('balance').innerText = balance;
+    }
+    else {
+        BalanceError.style.display = 'block';
+    }
 
 
 });
@@ -43,10 +48,19 @@ document.getElementById('save-btn').addEventListener('click', function () {
 
 
     let prevbalance = parseFloat(document.getElementById('balance').innerText);
-    console.log(prevbalance);
+
     let remainingBalance = document.getElementById('remaining-balance');
-    remainingBalance = prevbalance - mySavingsAmount;
-    document.getElementById('remaining-balance').innerText = remainingBalance;
+    const remainingBalanceError = document.getElementById('remaining-balance-error');
+    if (prevbalance > mySavingsAmount) {
+        remainingBalance = prevbalance - mySavingsAmount;
+        document.getElementById('remaining-balance').innerText = remainingBalance;
+    }
+    else {
+
+        remainingBalanceError.style.display = 'block';
+    }
+
+
 
 
 
