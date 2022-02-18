@@ -6,12 +6,12 @@ function getSavings() {
     document.getElementById('savings-amount').innerText = savings;
     return savings;
 }
-function getnewBalance() {
 
-}
+
 
 function getTotalExpenses() {
     const incomeInput = parseFloat(document.getElementById('income-input').value);
+
     const foodInput = parseFloat(document.getElementById('food-input').value);
     const rentInput = parseFloat(document.getElementById('rent-input').value);
     const clothesInput = parseFloat(document.getElementById('clothes-input').value);
@@ -23,6 +23,7 @@ function getTotalExpenses() {
 
 // handling calc button 
 document.getElementById('calc-btn').addEventListener('click', function () {
+
     // total expenses calculation 
     const newTotalExpenses = getTotalExpenses();
 
@@ -37,6 +38,7 @@ document.getElementById('calc-btn').addEventListener('click', function () {
     else {
         BalanceError.style.display = 'block';
     }
+
 
 
 });
