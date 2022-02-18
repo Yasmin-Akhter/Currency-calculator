@@ -12,6 +12,7 @@ function getSavings() {
 function getTotalExpenses() {
     const incomeInput = parseFloat(document.getElementById('income-input').value);
 
+
     const foodInput = parseFloat(document.getElementById('food-input').value);
     const rentInput = parseFloat(document.getElementById('rent-input').value);
     const clothesInput = parseFloat(document.getElementById('clothes-input').value);
@@ -22,8 +23,7 @@ function getTotalExpenses() {
 }
 
 // handling calc button 
-document.getElementById('calc-btn').addEventListener('click', function () {
-
+document.getElementById('calc-btn').addEventListener('click', function (event) {
     // total expenses calculation 
     const newTotalExpenses = getTotalExpenses();
 

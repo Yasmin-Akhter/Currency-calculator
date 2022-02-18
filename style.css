@@ -1,6 +1,14 @@
+.h-style{
+    color: rgb(4, 119, 165);
+}
+.my-style{
+    background-color: rgba(245, 236, 245, 0.568);
+    box-shadow: 2px 2px 2px grey;
+}
  #remaining-balance-error, #balance-error{
      background-color: brown;
      color: white;
      padding-left: 10px;
       display:none;  
  }  
+ 
